@@ -17,8 +17,8 @@ export const NavConfig = {
 	],
 	rightnav: [
 		{
-			title: "login",
-			href: "/login",
+			title: "Google",
+			href: "https://google.com/",
 		},
 	],
 	sociallinks: [
