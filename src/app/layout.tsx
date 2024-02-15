@@ -25,10 +25,12 @@ export default function RootLayout({
 	return (
 		<>
 			<html lang="en" suppressHydrationWarning>
+			<body>
 				<Head>{children}</Head>
 				<SiteHeader />
 				<div className="mx-auto">{children}</div>
 				<SiteFooter />
+				</body>
 			</html>
 		</>
 	);

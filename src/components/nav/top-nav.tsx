@@ -1,5 +1,7 @@
 "use client";
 import "~/styles/globals.css";
+import * as React from "react";
+import Link from "next/link";
 import {
 	navigationMenuTriggerStyle,
 	NavigationMenu,
@@ -11,25 +13,30 @@ import {
 	NavigationMenuIndicator,
 	NavigationMenuViewport,
 } from "../ui/navigation-menu";
-import { SiteConfig } from "~/config/site-config";
-import { NavConfig } from "~/config/nav-config";
-import * as React from "react";
-import Link from "next/link";
 
-export function TopNav({ items }) {
-	return (
+interface MenuItem {
+    href: string;
+    title: string;
+}
+
+interface TopNavProps {
+    items: MenuItem[];
+}
+
+export function TopNav({ items }: TopNavProps) {
+    return (
 		<>
-			<NavigationMenu>
-				<NavigationMenuList>
-					{items.map((item, index) => (
-						<Link key={index} href={item.href} legacyBehavior passHref>
-							<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-								{item.title}
-							</NavigationMenuLink>
-						</Link>
-					))}
-				</NavigationMenuList>
-			</NavigationMenu>
+        <NavigationMenu>
+            <NavigationMenuList>
+                {items.map((item) => (
+                    <Link key={item.href} href={item.href} legacyBehavior passHref>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            {item.title}
+                        </NavigationMenuLink>
+                    </Link>
+                ))}
+            </NavigationMenuList>
+        </NavigationMenu>
 		</>
-	);
+    );
 }

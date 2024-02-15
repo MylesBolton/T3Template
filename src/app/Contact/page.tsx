@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiteConfig } from "~/config/site-config";
 
 export default function HomePage() {

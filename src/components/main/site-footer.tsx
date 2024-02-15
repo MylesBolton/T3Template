@@ -2,7 +2,6 @@ import "~/styles/globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { SiteConfig } from "~/config/site-config";
-import { SocialNav } from "../nav/social-nav";
 import { NavConfig } from "~/config/nav-config";
 import { FooterSocial } from "../widgets/footer-social";
 import { FooterLinks } from "../widgets/footer-external";

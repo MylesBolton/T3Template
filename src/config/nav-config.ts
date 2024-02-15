@@ -21,6 +21,20 @@ export const NavConfig = {
 			href: "https://google.com/",
 		},
 	],
+	sidenav: [
+		{
+			title: "Home",
+			href: "/",
+		},
+		{
+			title: "About",
+			href: "/About",
+		},
+		{
+			title: "Contact",
+			href: "/Contact",
+		},
+	],
 	sociallinks: [
 		{
 			title: "FaceBook",
