@@ -1,4 +1,4 @@
-#My Template
+# My Template
 This is a website Template that i made for myself, if you find it usefull give it a star/fork.
 
 ## Create T3 App
