@@ -6,12 +6,7 @@ import {
 	navigationMenuTriggerStyle,
 	NavigationMenu,
 	NavigationMenuList,
-	NavigationMenuItem,
-	NavigationMenuContent,
-	NavigationMenuTrigger,
 	NavigationMenuLink,
-	NavigationMenuIndicator,
-	NavigationMenuViewport,
 } from "../ui/navigation-menu";
 
 interface MenuItem {
@@ -25,7 +20,6 @@ interface TopNavProps {
 
 export function TopNav({ items }: TopNavProps) {
     return (
-		<>
         <NavigationMenu>
             <NavigationMenuList>
                 {items.map((item) => (
@@ -37,6 +31,5 @@ export function TopNav({ items }: TopNavProps) {
                 ))}
             </NavigationMenuList>
         </NavigationMenu>
-		</>
     );
 }

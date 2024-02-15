@@ -1,26 +1,19 @@
 import "~/styles/globals.css";
-import { SiteConfig } from "~/config/site-config";
 import { TopNav } from "../nav/top-nav";
 import { NavConfig } from "~/config/nav-config";
 import { SocialNav } from "../nav/social-nav";
-import Link from "next/link";
-import Image from "next/image";
 import { SideNav } from "../nav/side-nav";
+import { TitleWidget } from "../widgets/title";
 
 export function SiteHeader() {
 	return (
 		<header className="sticky top-0 w-full border-b bg-background">
 			<div className="container flex flex-1 pb-2 pt-2">
 			<div className="flex w-auto items-center md:hidden">
-					<SideNav items={NavConfig.sidenav} />
+					<SideNav items={NavConfig.sidenav} items2={NavConfig.rightnav} items3={NavConfig.sociallinks}/>
 				</div>
 				<div className="hidden w-auto items-centerflex px-5 md:flex">
-					<Link href="/">
-						<div className="w-auto items-center flex col-span-2 space-x-1">
-							<Image src="/favicon.ico" width="32" height="32" alt="Tmp" />
-							<h1>{SiteConfig.sitetitle}</h1>
-						</div>
-					</Link>
+					<TitleWidget />
 				</div>
 				<div className="hidden w-auto items-center md:flex">
 					<TopNav items={NavConfig.homenav} />

@@ -1,15 +1,9 @@
 import "~/styles/globals.css";
-import { Inter } from "next/font/google";
 import { SiteHeader } from "~/components/main/site-header";
 import { SiteFooter } from "~/components/main/site-footer";
 import { SiteConfig } from "~/config/site-config";
 import Head from "next/head";
-import { cn } from "~/lib/utils";
 
-const inter = Inter({
-	subsets: ["latin"],
-	variable: "--font-sans",
-});
 
 export const metadata = {
 	title: SiteConfig.sitetitle,
