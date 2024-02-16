@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
@@ -5,7 +7,6 @@ import Icon from "../backend/icon";
 
 interface SocialNavItem {
   href: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any;
   title: string;
 }
