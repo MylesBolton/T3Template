@@ -5,7 +5,7 @@ import Icon from "../backend/icon";
 
 interface SocialNavItem {
   href: string;
-  icon: string;
+  icon: never;
   title: string;
 }
 
