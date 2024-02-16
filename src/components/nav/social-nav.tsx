@@ -5,7 +5,8 @@ import Icon from "../backend/icon";
 
 interface SocialNavItem {
   href: string;
-  icon: never;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: any;
   title: string;
 }
 
