@@ -4,6 +4,7 @@ import { NavConfig } from "~/config/nav-config";
 import { SocialNav } from "../nav/social-nav";
 import { SideNav } from "../nav/side-nav";
 import { TitleWidget } from "../widgets/title";
+import { ThemeToggle } from "../widgets/theme-toggle";
 
 export function SiteHeader() {
 	return (
@@ -27,6 +28,7 @@ export function SiteHeader() {
 					</div>
 					<div className="w-auto items-center">
 						<SocialNav items={NavConfig.sociallinks} />
+						<ThemeToggle />
 					</div>
 				</div>
 			</div>

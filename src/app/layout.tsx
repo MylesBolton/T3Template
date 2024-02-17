@@ -3,7 +3,7 @@ import { SiteHeader } from "~/components/main/site-header";
 import { SiteFooter } from "~/components/main/site-footer";
 import { SiteConfig } from "~/config/site-config";
 import Head from "next/head";
-
+import { ThemeProvider } from "~/components/backend/theme-provider";
 
 export const metadata = {
 	title: SiteConfig.sitetitle,
@@ -19,11 +19,13 @@ export default function RootLayout({
 	return (
 		<>
 			<html lang="en" suppressHydrationWarning>
-			<body>
 				<Head>{children}</Head>
-				<SiteHeader />
-				<div className="mx-auto">{children}</div>
-				<SiteFooter />
+				<body>
+					<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+						<SiteHeader />
+						<div className="mx-auto">{children}</div>
+						<SiteFooter />
+					</ThemeProvider>
 				</body>
 			</html>
 		</>
